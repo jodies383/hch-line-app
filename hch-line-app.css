@@ -1,0 +1,14 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+.header{
+font-size: xx-large;
+}
+.navBar{
+    margin-left: 35%;
+}
+.mapImage{
+    margin-top: 5%;
+    margin-left: 45%;
+}
