@@ -20,10 +20,13 @@
             <a href="hospital.html">Find a Health Care Facility</a>
             <a href="contact.html">Contact</a>
         </div>
-
+        <hr>
         <div class="mapImage">
             <img src="./CCT_HealthSubdistricts1024_1.jpg" style="width: 55%;">
+            
             <div class="numbers">
+                
+                <p>Number of cases in the Western Cape June 2021</p>
                 <div>
                     Northern: 748
                 </div>
@@ -51,12 +54,18 @@
             </div>
         </div><br>
         <br>
+        <div id="container"></div>
 
         <div class="AppointmentForm">
-            <!-- <button onclick="myFunction" class="dropDown">Dropdown</button> -->
-            <div id="Dropdown" class="dropdown-content">
-                <button><a href="AppointmentForm.html">Booking An Appointment</a></button>
-            </div>
+
+            <button class="book" onclick="myFunction()">Book An Appointment</button>
+
+            <script>
+                function myFunction() {
+                    window.open("AppointmentForm.html");
+                }
+            </script>
+
         </div>
         <div class="district"></div>
         <table class="table">
@@ -69,5 +78,7 @@
         </table>
     </div>
 
+    <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
+    <script src="hch-line-app.js"></script>
 
 </html>
