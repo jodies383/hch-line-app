@@ -28,6 +28,8 @@ body {
     margin-top: 8%;
     margin-bottom: 2%;
     margin-left: 33%;
+    display: flex;
+    flex-direction: column;
 }
 
 .statsImg {
@@ -40,4 +42,7 @@ body {
     margin-left: 10%;
     padding: 15px;
     text-align: center;
+}
+.numbers{
+   font-size:large;
 }
