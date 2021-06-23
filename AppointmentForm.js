@@ -22,7 +22,7 @@ var noSet = document.querySelector(".theNoSettings")
 //reference the E-mail
 var EmailSet = document.querySelector("#Email")
 //reference the description
-var descriptionSet = document.querySelector("#YesDescription")
+var descriptionSet = document.querySelector("#description")
 //reference the submit buttion
 var submitBtn = document.querySelector(".submitBtn")
 //reference the form
