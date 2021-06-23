@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hch-line-app.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form">
+        <h1>Appointment Form</h1>
+        <div class="fillUp">
+            <p>If you would like to arrange an Appointment at your chosen Hospital/Clinic/Community Care Centre, Please fill out this Appointment form and we will get back to you as soon as possible</p>
+        <hr>
+        </div>
+        
+        <div class="details">
+            <form>
+                <label for="">Name</label>
+                <input type="" name="NameSettings" class="nameDetail" id="text" value=""
+                placeholder="enter your name" onkeypress="return(event.charCode > 64 && event.charCode < 91)||(event.charCode > 96 && event.charCode < 123)"><br>
+                <br>
+                <label for="">Surname</label>
+                <input type="" name="surnameSettings" class="surnameDetail" id="text" value=""
+                placeholder="enter your surname" onkeypress="return(event.charCode > 64 && event.charCode < 91)||(event.charCode > 96 && event.charCode < 123)"><br>
+            <br>
+            <label for="">Gender</label>
+                <input type="" name="genderSettings" class="genderDetail" id="text" value=""
+                placeholder="female/male" onkeypress="return(event.charCode > 64 && event.charCode < 91)||(event.charCode > 96 && event.charCode < 123)"><br>
+                <br>
+                <label for="">Date Of Birth</label>
+                <input type="date" class="DOB" name="Date OF Birth"><br>
+                <br>
+                <label for="">Physical Address</label>
+                <input type="Address" name="AddressSettings" class="AddressDetail" id="text" value=""
+                placeholder="Address" onkeypress="return(event.charCode > 64 && event.charCode < 91)||(event.charCode > 96 && event.charCode < 123)"><br>
+                <br>
+                <label for="">Street 1</label>
+                <input type="Address" name="AddressSettings" class="AddressDetail" id="text" value=""
+                placeholder="Address" onkeypress="return(event.charCode > 64 && event.charCode < 91)||(event.charCode > 96 && event.charCode < 123)"><br>
+                <br>
+                <label for="">Street 2</label>
+                <input type="" name="AddressSettings" class="AddressDetail" id="text" value=""
+                placeholder="Address" onkeypress="return(event.charCode > 64 && event.charCode < 91)||(event.charCode > 96 && event.charCode < 123)"><br>
+                <br>
+                <label for="">District</label>
+                <input type="" name="AddressSettings" class="AddressDetail" id="text" value=""
+                placeholder="Address" onkeypress="return(event.charCode > 64 && event.charCode < 91)||(event.charCode > 96 && event.charCode < 123)"><br>
+                <br>
+                <label for="">Postal Code</label>
+                <input type="" name="AddressSettings" class="AddressDetail" id="text" value=""
+                placeholder="Address" onkeypress="return(event.charCode > 64 && event.charCode < 91)||(event.charCode > 96 && event.charCode < 123)"><br>
+                <br>
+                <label for="">Contact</label>
+                <input type="" name="contacts" class="ContactDetail" id="text" value="" placeholder="no."><br>
+                <br>
+                <label for="">E-mail Address</label>
+                <input type="email" name="contacts" class="ContactDetail" id="text" value="" placeholder="myname@example.uz"><br>
+                <br>
+                <label for="doctors">Doctors</label>
+                <select name="" class="doctors">
+                    <option value="GP">General Practioner</option>
+                    <option value="doc">Podratrist</option>
+                    <option value="doc">Pediatrian</option>
+                    <option value="doc">Endocrinologist</option>
+                    <option value="doc">Neorogist</option>
+                    <option value="doc">Allergist/Immunologist</option>
+                    <option value="doc">Psychiatrist</option>
+                    <option value="doc">OB/GYN</option>
+                    <option value="doc">Surgen</option>
+                    <option value="doc">Oncologist</option>
+                    <option value="doc">Emergency Physician</option>
+                    <option value="doc">Radiologist</option>
+                    <option value="doc">Cardiologist</option>
+                    <option value="doc">Dermatologist</option>
+                    <option value="doc">Dentist</option>
+                </select>
+                <div class="Yes">
+                    <p>Have yu previously attend/ visited our facility?</p>
+                    <input class="theYesSettings" type="radio" name="Answer" id="Yes" value="">
+                    <label for="yes">Yes</label>
+                    </div>
+                <br>
+                <div class="No">
+                <input class="theNoSettings" type="radio" name="Answer" id="No" value="">
+                <label for="No">No</label>
+                </div><br>
+    
+                <div class="description">
+                    <p>If Yes,State on which condition and when?</p>
+                    <input class="descriptionSettings" type="text" name="Answer" id="Yes" value="">
+                </div>
+
+                <div class="Booking Appointment">
+                    <label for=""></label>
+                    <br>  
+                </div>
+                <label class="submitBtn">
+                    <input type="submit" value="Submit">
+                </label>
+
+
+            </form>
+        </div>
+    </div>
+    
+</body>
+<script src="AppointmentFactory.js"></script>
+<script src="AppointmentForm.js"></script>
+</html>
