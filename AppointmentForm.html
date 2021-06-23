@@ -16,50 +16,67 @@
         </div>
         
         <div class="details">
-            <form>
+            <form class="myform" action="./myForm.html">
                 <label for="">Name</label>
-                <input type="" name="NameSettings" class="nameDetail" id="text" value=""
+                <input type="" name="NameSettings" class="nameDetail" id="nameP" value=""
                 placeholder="enter your name" onkeypress="return(event.charCode > 64 && event.charCode < 91)||(event.charCode > 96 && event.charCode < 123)"><br>
                 <br>
                 <label for="">Surname</label>
-                <input type="" name="surnameSettings" class="surnameDetail" id="text" value=""
+                <input type="" name="surnameSettings" class="surnameDetail" id="surname" value=""
                 placeholder="enter your surname" onkeypress="return(event.charCode > 64 && event.charCode < 91)||(event.charCode > 96 && event.charCode < 123)"><br>
             <br>
             <label for="">Gender</label>
-                <input type="" name="genderSettings" class="genderDetail" id="text" value=""
-                placeholder="female/male" onkeypress="return(event.charCode > 64 && event.charCode < 91)||(event.charCode > 96 && event.charCode < 123)"><br>
+                <select name="" class="gender" id="gender" >
+                    <option value=""></option>
+                    <option value="">Female</option>
+                    <option value="">Male</option>
+                </select><br>
+                <br>
+                <label for="">Race</label>
+                <select name="" class="race" >
+                    <option value=""></option>
+                    <option value="">African</option>
+                    <option value="">White</option>
+                    <option value="">Indian</option>
+                    <option value="">Mixed Race</option>
+
+                </select><br>
                 <br>
                 <label for="">Date Of Birth</label>
-                <input type="date" class="DOB" name="Date OF Birth"><br>
+                <input type="date" class="DOB" name="Date OF Birth" id="DOB"><br>
+                <br>
+                <label for="">Nationality</label>
+                <input type="text" class="Ubuzwe" name="Ubuzwe" id="Nationality"><br>
                 <br>
                 <label for="">Physical Address</label>
-                <input type="Address" name="AddressSettings" class="AddressDetail" id="text" value=""
+                <input type="Address" name="AddressSettings" class="AddressDetail" id="address" value=""
                 placeholder="Address" onkeypress="return(event.charCode > 64 && event.charCode < 91)||(event.charCode > 96 && event.charCode < 123)"><br>
                 <br>
                 <label for="">Street 1</label>
-                <input type="Address" name="AddressSettings" class="AddressDetail" id="text" value=""
+                <input type="Address" name="AddressSettings" class="AddressDetail" id="address" value=""
                 placeholder="Address" onkeypress="return(event.charCode > 64 && event.charCode < 91)||(event.charCode > 96 && event.charCode < 123)"><br>
                 <br>
                 <label for="">Street 2</label>
-                <input type="" name="AddressSettings" class="AddressDetail" id="text" value=""
+                <input type="" name="AddressSettings" class="AddressDetail" id="address" value=""
                 placeholder="Address" onkeypress="return(event.charCode > 64 && event.charCode < 91)||(event.charCode > 96 && event.charCode < 123)"><br>
                 <br>
                 <label for="">District</label>
-                <input type="" name="AddressSettings" class="AddressDetail" id="text" value=""
+                <input type="" name="AddressSettings" class="AddressDetail" id="address" value=""
                 placeholder="Address" onkeypress="return(event.charCode > 64 && event.charCode < 91)||(event.charCode > 96 && event.charCode < 123)"><br>
                 <br>
                 <label for="">Postal Code</label>
-                <input type="" name="AddressSettings" class="AddressDetail" id="text" value=""
+                <input type="" name="AddressSettings" class="AddressDetail" id="address" value=""
                 placeholder="Address" onkeypress="return(event.charCode > 64 && event.charCode < 91)||(event.charCode > 96 && event.charCode < 123)"><br>
                 <br>
                 <label for="">Contact</label>
-                <input type="" name="contacts" class="ContactDetail" id="text" value="" placeholder="no."><br>
+                <input type="" name="contacts" class="ContactDetail" id="contacts" value="" placeholder="no."><br>
                 <br>
                 <label for="">E-mail Address</label>
-                <input type="email" name="contacts" class="ContactDetail" id="text" value="" placeholder="myname@example.uz"><br>
+                <input type="email" name="contacts" class="ContactDetail" id="Email" value="" placeholder="myname@example.uz"><br>
                 <br>
                 <label for="doctors">Doctors</label>
-                <select name="" class="doctors">
+                <select name="" class="doctors" id="Doc">
+                    <option value="GP"></option>
                     <option value="GP">General Practioner</option>
                     <option value="doc">Podratrist</option>
                     <option value="doc">Pediatrian</option>
@@ -89,7 +106,7 @@
     
                 <div class="description">
                     <p>If Yes,State on which condition and when?</p>
-                    <input class="descriptionSettings" type="text" name="Answer" id="Yes" value="">
+                    <input class="descriptionSettings" type="text" name="Answer" id="YesDescription" value="">
                 </div>
 
                 <div class="Booking Appointment">
@@ -97,9 +114,14 @@
                     <br>  
                 </div>
                 <label class="submitBtn">
-                    <input type="submit" value="Submit">
+                    <button onclick="myFunction()">Submit</button>
+        
+                    <script>
+                        function myFuction(){
+                            window.open("myForm.html")
+                        }
+                    </script>
                 </label>
-
 
             </form>
         </div>
