@@ -1,0 +1,48 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    font-family: 'Josefin Sans', sans-serif;}
+
+.header {
+    /* margin-left: 2%; */
+    font-size: xx-large;
+}
+
+.navBar a:link, a:visited {
+    margin-left: 10%;
+    text-align: center;
+    color: #232c3d;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.navBar a:hover{
+    color: grey;
+}
+
+.mapImage {
+    margin-top: 8%;
+    margin-bottom: 2%;
+    margin-left: 33%;
+    display: flex;
+    flex-direction: column;
+}
+
+.statsImg {
+    margin-top: 5%;
+    margin-left: 23%;
+}
+.table{
+    border-style: solid;
+    width: 75%;
+    margin-left: 10%;
+    padding: 15px;
+    text-align: center;
+}
+.numbers{
+   font-size:large;
+}
