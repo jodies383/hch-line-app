@@ -1,3 +1,9 @@
+var ctx = document.getElementById('myChart');
+var ctx = document.getElementById('myChart').getContext('2d');
+var ctx = $('#myChart');
+var ctx = 'myChart';
+
+
 
 anychart.onDocumentReady(function () {
 
@@ -264,5 +270,8 @@ search.addEventListener('keyup', function (filSearch) {
     const disFil = districtList.filter(function (facilities) {
         return facilities.District === filHosp;
     });
+
     showHosp(disFil)
 })
+
+
