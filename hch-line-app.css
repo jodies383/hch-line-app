@@ -4,13 +4,19 @@ body {
     display: flex;
     flex-direction: column;
     margin: 2%;
-    font-family: 'Josefin Sans', sans-serif;}
+    font-family: 'Josefin Sans', sans-serif;
+       
+}
 
 .header {
     /* margin-left: 2%; */
     font-size: xx-large;
+    color: rgb(67, 147, 179);
+    display: flex;
 }
-
+.info1, .info2 {
+    display: flex;
+}
 .navBar a:link, a:visited {
     margin-left: 10%;
     text-align: center;
@@ -100,4 +106,6 @@ td {
   .call {
       font-size: 150px;
   }
-
+footer{
+    background-color: black;
+}
