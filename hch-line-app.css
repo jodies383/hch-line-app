@@ -51,11 +51,28 @@ body {
     margin-top: 5%;
 }
 
+#button-send{
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(116, 172, 236);
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
 .statsImg {
     text-align: center;
     margin-top: 10%;
-    margin-right: 7%;
 }
+.thanks{
+    text-align: center;
+}
+hr {
+    border: 1px solid rgb(67, 147, 179);
+  }
 
 .table {
     /* border-style: solid; */
@@ -116,7 +133,14 @@ th, td {
     font-size: 150px;
 }
 
+.contact {
+    display: flex;
+}
 
+.phone, .address {
+    margin-top: 2%;
+    margin-left: 15%;
+}
 
 .info {
     margin-top: 5%;
