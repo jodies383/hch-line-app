@@ -6,7 +6,7 @@ anychart.onDocumentReady(function() {
         ["Eastern", 767],
         ["Khayelitsha", 27],
         ["Tygerberg", 631],
-        ["Mitchells Plain", 268],3
+        ["Mitchells Plain", 268],
         ["Klipfontein", 324],
         ["Southern", 779],
         ["Western", 741]
