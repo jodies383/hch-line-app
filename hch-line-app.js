@@ -1,49 +1,26 @@
-var ctx = document.getElementById('myChart');
-var ctx = document.getElementById('myChart').getContext('2d');
-var ctx = $('#myChart');
-var ctx = 'myChart';
-
-
-
-anychart.onDocumentReady(function () {
-
-
-
+anychart.onDocumentReady(function() {
     var data = {
-        header: ["District", "Number of Cases"],
-        rows: [
-            ["Northern", 748],
-            ["Eastern", 767],
-            ["Khayelitsha", 27],
-            ["Tygerberg", 631],
-            ["Mitchells Plain", 268],
-            ["Klipfontein", 324],
-            ["Southern", 779],
-            ["Western", 741]
-        ]
-    };
-
-
+      header: ["District", "Number of Cases"],
+      rows: [
+        ["Northern", 748],
+        ["Eastern", 767],
+        ["Khayelitsha", 27],
+        ["Tygerberg", 631],
+        ["Mitchells Plain", 268],3
+        ["Klipfontein", 324],
+        ["Southern", 779],
+        ["Western", 741]
+    ]};
     var chart = anychart.column();
-
-
     chart.data(data);
-
-
     chart.title("Number of cases in the Western Cape June 2021");
-
-
     chart.container("container");
     chart.draw();
+  });
 
-    chart.listen("pointsSelect", (e) => {
-        var name = e.point.getStat("categoryName");
-        console.log(name);
-    });
-});
+
 const hosp = document.querySelector(".hosp")
 const search = document.querySelector(".search")
-// hosp.innerHTML = "<tr><td>1</td><td>2</td><td>3</td></tr>"
 const districtList = [
     {
         "Name": "Mediclinic Durbanville",
@@ -270,8 +247,6 @@ search.addEventListener('keyup', function (filSearch) {
     const disFil = districtList.filter(function (facilities) {
         return facilities.District === filHosp;
     });
-
     showHosp(disFil)
 })
-
 
