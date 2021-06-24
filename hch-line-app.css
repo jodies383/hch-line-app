@@ -1,11 +1,9 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
 body {
     display: flex;
     flex-direction: column;
     margin: 2%;
     font-family: 'Josefin Sans', sans-serif;
-       
 }
 
 .header {
@@ -14,9 +12,11 @@ body {
     color: rgb(67, 147, 179);
     display: flex;
 }
+
 .info1, .info2 {
-    display: flex;
+    font-size: 120%;
 }
+
 .navBar a:link, a:visited {
     margin-left: 10%;
     text-align: center;
@@ -27,7 +27,8 @@ body {
     font-size: 20px;
     overflow: auto;
 }
-.navBar a:hover{
+
+.navBar a:hover {
     color: grey;
 }
 
@@ -35,10 +36,9 @@ body {
     margin-top: 8%;
     margin-bottom: 2%;
     margin-left: 20%;
-   
 }
 
-.landImg{
+.landImg {
     display: flex;
     flex-direction: column;
     font-size: large;
@@ -46,32 +46,39 @@ body {
     margin-right: 15%;
     text-align: center;
 }
-.divOne{
+
+.divOne {
     margin-top: 5%;
 }
+
 .statsImg {
     text-align: center;
     margin-top: 10%;
     margin-right: 7%;
 }
-.table{
+
+.table {
     /* border-style: solid; */
     width: 75%;
     margin-left: 10%;
     padding: 15px;
     text-align: center;
 }
-th,
-td {
-    border-bottom:1px solid #E3F1D5 ;
-	padding: 15px;
-	background-color: rgba(255,255,255,0.2);
-	/* color: #fff; */
+
+th, td {
+    border-bottom: 1px solid #E3F1D5;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    /* color: #fff; */
 }
-.numbers{
-   font-size:large;
+
+.numbers {
+    font-size: large;
 }
-.book{
+
+.book {
+    margin-top: 1%;
+    margin-bottom: 1%;
     margin-left: 65%;
     background-color: white;
     color: black;
@@ -84,25 +91,34 @@ td {
     transition-duration: 0.4s;
     cursor: pointer;
 }
-.book a:hover{
+
+.book a:hover {
     background-color: rgb(116, 172, 236);
 }
+
 #container {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-  }
-  .search {
+}
+
+.search {
     /* float: right; */
     padding: 6px;
     border: none;
     margin-left: 15%;
     margin-top: 2%;
-    /* margin-bottom: 2%; */
     font-size: 17px;
-  }
+}
 
+.call {
+    font-size: 150px;
+}
+
+
+
+<<<<<<< HEAD
   .call {
       font-size: 150px;
   }
@@ -122,3 +138,21 @@ td {
       margin: auto;
   }
 
+=======
+.info {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: left;
+    font-size: 130%;
+}
+
+.hosImg {
+    float: right;
+    margin: 2%;
+}
+
+.tyImg {
+    float: left;
+    margin: 2%;
+}
+>>>>>>> 785823151446ef1b11f354fb8abd442a988aecf3

@@ -273,18 +273,15 @@ var Southern = ["Ocean View CDC","False Bay Hospital","Red Hill Clinic","Hout Ba
 
 var Western = ["Melkbosstrand Clinic","Netcare Blaauwberg Hospital","Mediclinic Milnerton","Tableview Clinic","Du Noon Clinic"]
 
-document.addEventListener("change", () =>{
-    var e = document.getElementById("hosp");
-    var strUser = e.value;
-    alert(strUser)
-    
-})
+
+
+
 
 document.body.onload = () => {
 var templateElem = document.querySelector(".appTemplate").innerHTML;
 var appTemplate = Handlebars.compile(templateElem);
 var displayElem = document.getElementById("input-Hos");
-var displayHTML = appTemplate({reg : Northern});
+var displayHTML = appTemplate({reg : Khayelitsha});
 
 displayElem.innerHTML = displayHTML;
 }

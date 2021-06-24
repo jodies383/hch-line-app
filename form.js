@@ -32,29 +32,29 @@ var displayElem = document.querySelector(".error")
 
 var fillForm = [];
 
-submitBtn.addEventListener('click', function (data) {
-    var myForm = form.value;
-    console.log(myForm);
-    var nameP = nameSet.value;
-    var surname = surnameSet.value;
+// submitBtn.addEventListener('click', function (data) {
+//     var myForm = form.value;
+//     console.log(myForm);
+//     var nameP = nameSet.value;
+//     var surname = surnameSet.value;
     // var gender = genderSet.value;
     // var dob = DOBSet.value;
     // var ID = myID.value;
 
     // data = data.toLowerCase();
     // data = data.toUpperCase();
-    if (!nameP) {
-        if (!fillForm.includes(data)) {
-            displayElem.innerHTML = "name required*"
-            console.log(fillForm);
-        }
+//     if (!nameP) {
+//         if (!fillForm.includes(data)) {
+//             displayElem.innerHTML = "name required*"
+//             console.log(fillForm);
+//         }
 
         
-    }
-    if(!surname){
-displayElem.innerHTML ='surname required*'
-    }
-})
+//     }
+//     if(!surname){
+// displayElem.innerHTML ='surname required*'
+//     }
+// })
 // if(!nameP){
 //     console.log(nameP);
 //     fillForm.push({input:'input-first', msg:'name required'})
