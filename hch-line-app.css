@@ -67,3 +67,10 @@ body {
     margin: 0;
     padding: 0;
   }
+  input[type=text] {
+    /* float: right; */
+    padding: 6px;
+    border: none;
+    margin: 5%;
+    font-size: 17px;
+  }
