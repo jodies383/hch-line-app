@@ -90,3 +90,18 @@ body {
       font-size: 150px;
   }
 
+  .container {
+  display:flex
+  }
+
+  .mail {
+      margin: auto;
+  }
+  .phone {
+      margin: auto;
+  }
+
+  .address {
+      margin: auto;
+  }
+
