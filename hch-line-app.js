@@ -6,7 +6,7 @@ anychart.onDocumentReady(function() {
         ["Eastern", 767],
         ["Khayelitsha", 27],
         ["Tygerberg", 631],
-        ["Mitchells Plain", 268],3
+        ["Mitchells Plain", 268],
         ["Klipfontein", 324],
         ["Southern", 779],
         ["Western", 741]
@@ -16,8 +16,12 @@ anychart.onDocumentReady(function() {
     chart.title("Number of cases in the Western Cape June 2021");
     chart.container("container");
     chart.draw();
+
+
+  localStorage.setItem('data', JSON.stringify(data))
   });
 
+  var retrieveData = JSON.parse(localStorage.getItem('data'));
 
 const hosp = document.querySelector(".hosp")
 const search = document.querySelector(".search")
