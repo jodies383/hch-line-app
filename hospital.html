@@ -47,9 +47,10 @@
         <input type="text" class="search" placeholder="Search for a district">
         <div class="AppointmentForm">
 
-            <button class="book" onclick="myFunction()">Book An Appointment</button><br>
-            <label for="input-doctor" style="margin-left: 65%;">Districts</label><br>
+            <button id="bookApp" class="book" onclick="myFunction()">Book An Appointment</button><br>
+            <label for="input-doctor" style="margin-left: 65%;"><b>DISTRICTS:</b></label><br>
             <select id="hosp" name="safe" class="form-box book">
+                <option value=""></option>
                 <option value="northern">Northern</option>
                 <option value="eastern">Eastern</option>
                 <option value="khayelitsha">Khayelitsha</option>
@@ -77,6 +78,10 @@
 
     </div>
     <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
+    <script src="./hch-line-app-factory.js"></script>
     <script src="hch-line-app.js"></script>
-
+    <footer>
+        <hr>
+        powered by Dynamite
+    </footer>
 </html>
