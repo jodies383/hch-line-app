@@ -28,11 +28,13 @@ var descriptionSet = document.querySelector("#input-msg")
 var submitBtn = document.querySelector("#button-send")
 //reference the form
 var form = document.querySelector("#form-user")
+var displayElem = document.querySelector(".error")
 
 var fillForm = [];
 
 submitBtn.addEventListener('click', function (data) {
     var myForm = form.value;
+    console.log(myForm);
     var nameP = nameSet.value;
     var surname = surnameSet.value;
     // var gender = genderSet.value;
@@ -41,18 +43,26 @@ submitBtn.addEventListener('click', function (data) {
 
     // data = data.toLowerCase();
     // data = data.toUpperCase();
-    if (myForm) {
+    if (!nameP) {
         if (!fillForm.includes(data)) {
-            fillForm.push(data)
+            displayElem.innerHTML = "name required*"
             console.log(fillForm);
         }
-        if(!nameP){
-            console.log(nameP);
-            fillForm.push({input:'input-first', msg:'name required'})
-        }
+
         
     }
+    if(!surname){
+displayElem.innerHTML ='surname required*'
+    }
 })
+// if(!nameP){
+//     console.log(nameP);
+//     fillForm.push({input:'input-first', msg:'name required'})
+// }
+// if(myForm === !surname){
+//     fillForm.push({input:'input-second', msg:'surname required'})
+// }
+// console.log(myForm === !surname)
 
 
 

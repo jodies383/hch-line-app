@@ -16,12 +16,13 @@
         <hr>
     </div>
 
-    <form id="form-user" action="mailto:jodies383@gmail.com" enctype="text/plain" method="POST">
+    <span class="error"></span>
+    <form id="form-user" action="mailto:jodies383@gmail.com" enctype="text/plain" method="POST" onsubmit="location.href='myForm.html'">
         <div class="form-box error" data-errormsg="">
             <label for="input-first">Name</label>
             <input type="text" id="input-first" autofocus placeholder="enter name" tabindex="1">
         </div><br>
-
+        
         <div class="form-box error" data-errormsg="">
             <label for="input-Second">Surname</label>
             <input type="text" id="input-second" autofocus placeholder="enter surnmae" tabindex="2">
