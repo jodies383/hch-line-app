@@ -4,13 +4,19 @@ body {
     display: flex;
     flex-direction: column;
     margin: 2%;
-    font-family: 'Josefin Sans', sans-serif;}
+    font-family: 'Josefin Sans', sans-serif;
+       
+}
 
 .header {
     /* margin-left: 2%; */
     font-size: xx-large;
+    color: rgb(67, 147, 179);
+    display: flex;
 }
-
+.info1, .info2 {
+    display: flex;
+}
 .navBar a:link, a:visited {
     margin-left: 10%;
     text-align: center;
@@ -28,9 +34,10 @@ body {
 .mapImage {
     margin-top: 8%;
     margin-bottom: 2%;
-    margin-left: 30%;
+    margin-left: 20%;
    
 }
+
 .landImg{
     display: flex;
     flex-direction: column;
@@ -48,29 +55,37 @@ body {
     margin-right: 7%;
 }
 .table{
-    border-style: solid;
+    /* border-style: solid; */
     width: 75%;
     margin-left: 10%;
     padding: 15px;
     text-align: center;
 }
+th,
+td {
+    border-bottom:1px solid #E3F1D5 ;
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	/* color: #fff; */
+}
 .numbers{
    font-size:large;
 }
 .book{
-    /* background-color: #4CAF50; Green */
-    border-style: solid;
-    border-radius: 8px;
-    /* color: white; */
-    padding: 15px 32px;
-    /* text-align: center;
+    margin-left: 65%;
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(116, 172, 236);
+    padding: 10px 24px;
+    text-align: center;
     text-decoration: none;
-    display: inline-block; */
+    display: inline-block;
     font-size: 16px;
-    /* margin: 5%; */
-    margin-left: 10%;
-    margin-bottom: 5%;
-    margin-top: 5%;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.book a:hover{
+    background-color: rgb(116, 172, 236);
 }
 #container {
     width: 100%;
@@ -78,17 +93,20 @@ body {
     margin: 0;
     padding: 0;
   }
-  input[type=text] {
+  .search {
     /* float: right; */
     padding: 6px;
     border: none;
-    margin: 5%;
+    margin-left: 15%;
+    margin-top: 2%;
+    /* margin-bottom: 2%; */
     font-size: 17px;
   }
 
   .call {
       font-size: 150px;
   }
+<<<<<<< HEAD
 
   .container {
   display:flex
@@ -105,3 +123,8 @@ body {
       margin: auto;
   }
 
+=======
+footer{
+    background-color: black;
+}
+>>>>>>> f6da114849f5e4cd078f722f7afb59a15d5cdb6b

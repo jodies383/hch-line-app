@@ -228,7 +228,7 @@ const districtList = [
     },
 ]
 //hosp.innerHTML += hospString;
-showHosp(districtList)
+showHosp(districtList);
 
 function showHosp(list) {
     const dString = list.map(function (listHosp) {
@@ -241,10 +241,12 @@ function showHosp(list) {
     });
 
     const theHosp = dString.join("");
+    if (hosp) {
     hosp.innerHTML = theHosp;
+    }
 }
 
-
+if (search){
 search.addEventListener('keyup', function (filSearch) {
     const filHosp = filSearch.target.value;
 
@@ -253,4 +255,36 @@ search.addEventListener('keyup', function (filSearch) {
     });
     showHosp(disFil)
 })
+}
 
+var Northern = ['Mediclinic Durbanville', 'Fisantekraal Clinic', 'Brighton Street Clinic', 'Brackenfell Clinic', 'Northpine Clinic']
+
+var Eastern = ["Helderberg Hospital", "Somerset West Clinic", "Mediclinic Strand", "Fagan Street Clinic", "Ikhwezi CDC"]
+
+var Khayelitsha = ["Khayelitsha Hospital", "Town 2 CDC", "Kuyasa CDC", "Luvuyo CDC", "Matthew Goniwe CDC"]
+
+var MitchellsPlain = ["Rocklands Clinic","Tafelsig CDC","Melomed Mitchells Plain", "Westridge Clinic","Eastridge Clinic"]
+
+var Tygerberg = ["Dirkie Uys Clinic", "Parow Clinic", "Ruyterwacht CDC", "Elsies River Clinic", "Tygerberg Hospital"]
+
+var Klipfontein = ["Melomed Gatesville","Crossroads 1 Clinic","Manenberg Clinic","Hanover Park Clinic", "Gugulethu Clinic"]
+
+var Southern = ["Ocean View CDC","False Bay Hospital","Red Hill Clinic","Hout Bay Clinic","Westlake Clinic"]
+
+var Western = ["Melkbosstrand Clinic","Netcare Blaauwberg Hospital","Mediclinic Milnerton","Tableview Clinic","Du Noon Clinic"]
+
+document.addEventListener("change", () =>{
+    var e = document.getElementById("hosp");
+    var strUser = e.value;
+    alert(strUser)
+    
+})
+
+document.body.onload = () => {
+var templateElem = document.querySelector(".appTemplate").innerHTML;
+var appTemplate = Handlebars.compile(templateElem);
+var displayElem = document.getElementById("input-Hos");
+var displayHTML = appTemplate({reg : Northern});
+
+displayElem.innerHTML = displayHTML;
+}
