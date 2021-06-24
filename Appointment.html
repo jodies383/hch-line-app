@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Appointment Form</h1>
+    <div class="fillUp">
+        <p>If you would like to arrange an Appointment at your chosen Hospital/Clinic/Community Care Centre, Please fill
+            out this Appointment form and we will get back to you as soon as possible</p>
+        <hr>
+    </div>
+
+    <form id="form-user" action="mailto:jodies383@gmail.com" enctype="text/plain" method="POST">
+        <div class="form-box error" data-errormsg="">
+            <label for="input-first">Name</label>
+            <input type="text" id="input-first" autofocus placeholder="enter name" tabindex="1">
+        </div><br>
+
+        <div class="form-box error" data-errormsg="">
+            <label for="input-Second">Surname</label>
+            <input type="text" id="input-second" autofocus placeholder="enter surnmae" tabindex="2">
+        </div><br>
+
+        <div class="form-box" data-errormsg="">
+            <label for="input-date">D.O.B</label>
+            <input type="date" id="input-date" required tabindex="4">
+        </div><br>
+
+        <div class="form-box" data-errormsg="">
+            <label for="input-id">ID No.</label>
+            <input type="date" id="input-id" required tabindex="5">
+        </div><br>
+
+        <div class="form-box" data-errormsg="">
+            <label or="input-third">Nationality</label>
+            <input type="text" id="input-third" required tabindex="6">
+        </div><br>
+
+        <div class="form-box error" data-errormsg="">
+            <label for="input-forth">Gender</label>
+            <select name="" class="form-box" id="gender">
+                <option value=""></option>
+                <option value="">Female</option>
+                <option value="">Male</option>
+            </select>
+        </div><br>
+
+        <div class="form-box error" id="input-race" data-errormsg="">
+            <label for="input-race">Race</label>
+            <select name="" class="form-box">
+                <option value=""></option>
+                <option value="">African</option>
+                <option value="">White</option>
+                <option value="">Indian</option>
+                <option value="">Mixed Race</option>
+            </select><br>
+        </div><br>
+
+
+        <div class="form-box error" data-errormsg="">
+            <label for="input-address">Physical Address</label>
+            <input type="text" id="input-address" required placeholder="eg. 54 Ngoba">
+            <label for="input-address">Street </label>
+            <input type="text" id="input-address" required placeholder="eg. Mampunge road">
+            <label for="input-address">District</label>
+            <input type="text" id="input-address" required placeholder="eg. Khayelitsha">
+            <label for="input-address">Postal code</label>
+            <input type="text" id="input-address" required placeholder="eg. 7654">
+        </div><br>
+
+        <div class="form-box" data-errormsg="">
+            <label for="input-email">E-mail</label>
+            <input type="email" id="input-email" required placeholder="myname@example.uz" tabindex="6">
+        </div><br>
+
+
+        <div class="form-box" data-errormsg="">
+            <label for="input-contact">Contact</label>
+            <input type="number" id="input-contact" required placeholder="+27 765 876 987" tabindex="6">
+        </div><br>
+
+        <div class="form-box error"  id="input-doctor" data-errormsg="">
+            <label for="input-doctor">Doctors</label>
+            <select name="" class="form-box">
+                <option value=""></option>
+                <option value="GP">General Practioner</option>
+              <option value="doc">Podratrist</option>
+              <option value="doc">Pediatrian</option>
+              <option value="doc">Endocrinologist</option>
+              <option value="doc">Neorogist</option>
+              <option value="doc">Allergist/Immunologist</option>
+              <option value="doc">Psychiatrist</option>
+              <option value="doc">OB/GYN</option>
+              <option value="doc">Surgeon</option>
+              <option value="doc">Oncologist</option>
+              <option value="doc">Emergency Physician</option>
+              <option value="doc">Radiologist</option>
+              <option value="doc">Cardiologist</option>
+              <option value="doc">Dermatologist</option>
+              <option value="doc">Dentist</option>
+            </select><br>
+        </div><br>
+
+        <div class="form-box error" data-errormsg="">
+            <label for="input-Hos">Hospital</label>
+            <input type="text" id="input-Hos" required placeholder="Mansule Hospital" tabindex="6">
+        </div><br>
+
+        <div class="form-box error" data-errormsg="">
+            <p>Have you previously attended/visited our facility?</p>
+            <input type="radio" id="input-radio" required  tabindex="6">
+            <label for="input-radio">Yes</label>
+            <input type="radio" id="input-radio" required  tabindex="6">
+            <label for="input-radio">No</label>
+        </div><br>
+
+        <div class="form-box error" data-errormsg="">
+            <p>If Yes,State on which condition and when?</p>
+            <input type="text" id="input-msg" required placeholder="" tabindex="6">
+        </div><br>
+
+        <div class="form-box">
+            <button id="button-send">Submit</button>
+        </div>
+
+    </form>
+</body>
+<script src="form.js"></script>
+</html>
