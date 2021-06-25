@@ -23,7 +23,7 @@ anychart.onDocumentReady(function() {
 
   var retrieveData = JSON.parse(localStorage.getItem('data'));
 
-const hosp = document.querySelector(".hosp")
+const hospitalList = document.querySelector(".hosp")
 const search = document.querySelector(".search")
 const districtList = [
     {
@@ -241,8 +241,8 @@ function showHosp(list) {
     });
 
     const theHosp = dString.join("");
-    if (hosp) {
-    hosp.innerHTML = theHosp;
+    if (hospitalList) {
+        hospitalList.innerHTML = theHosp;
     }
 }
 
@@ -251,37 +251,67 @@ search.addEventListener('keyup', function (filSearch) {
     const filHosp = filSearch.target.value;
 
     const disFil = districtList.filter(function (facilities) {
-        return facilities.District === filHosp;
+        return facilities.District.includes(filHosp);
     });
     showHosp(disFil)
 })
 }
 
-var Northern = ['Mediclinic Durbanville', 'Fisantekraal Clinic', 'Brighton Street Clinic', 'Brackenfell Clinic', 'Northpine Clinic']
+var northern = ['Mediclinic Durbanville', 'Fisantekraal Clinic', 'Brighton Street Clinic', 'Brackenfell Clinic', 'Northpine Clinic']
 
-var Eastern = ["Helderberg Hospital", "Somerset West Clinic", "Mediclinic Strand", "Fagan Street Clinic", "Ikhwezi CDC"]
+var eastern = ["Helderberg Hospital", "Somerset West Clinic", "Mediclinic Strand", "Fagan Street Clinic", "Ikhwezi CDC"]
 
-var Khayelitsha = ["Khayelitsha Hospital", "Town 2 CDC", "Kuyasa CDC", "Luvuyo CDC", "Matthew Goniwe CDC"]
+var khayelitsha = ["Khayelitsha Hospital", "Town 2 CDC", "Kuyasa CDC", "Luvuyo CDC", "Matthew Goniwe CDC"]
 
-var MitchellsPlain = ["Rocklands Clinic","Tafelsig CDC","Melomed Mitchells Plain", "Westridge Clinic","Eastridge Clinic"]
+var mitchellsPlain = ["Rocklands Clinic","Tafelsig CDC","Melomed Mitchells Plain", "Westridge Clinic","Eastridge Clinic"]
 
-var Tygerberg = ["Dirkie Uys Clinic", "Parow Clinic", "Ruyterwacht CDC", "Elsies River Clinic", "Tygerberg Hospital"]
+var tygerberg = ["Dirkie Uys Clinic", "Parow Clinic", "Ruyterwacht CDC", "Elsies River Clinic", "Tygerberg Hospital"]
 
-var Klipfontein = ["Melomed Gatesville","Crossroads 1 Clinic","Manenberg Clinic","Hanover Park Clinic", "Gugulethu Clinic"]
+var klipfontein = ["Melomed Gatesville","Crossroads 1 Clinic","Manenberg Clinic","Hanover Park Clinic", "Gugulethu Clinic"]
 
-var Southern = ["Ocean View CDC","False Bay Hospital","Red Hill Clinic","Hout Bay Clinic","Westlake Clinic"]
+var southern = ["Ocean View CDC","False Bay Hospital","Red Hill Clinic","Hout Bay Clinic","Westlake Clinic"]
 
-var Western = ["Melkbosstrand Clinic","Netcare Blaauwberg Hospital","Mediclinic Milnerton","Tableview Clinic","Du Noon Clinic"]
+var western = ["Melkbosstrand Clinic","Netcare Blaauwberg Hospital","Mediclinic Milnerton","Tableview Clinic","Du Noon Clinic"]
+
+const districs = {
+    northern,
+    eastern,
+    khayelitsha,
+    mitchellsPlain,
+    tygerberg,
+    klipfontein,
+    southern,
+    western ,
+}
 
 
 
-
-
-document.body.onload = () => {
 var templateElem = document.querySelector(".appTemplate").innerHTML;
 var appTemplate = Handlebars.compile(templateElem);
 var displayElem = document.getElementById("input-Hos");
-var displayHTML = appTemplate({reg : Khayelitsha});
 
-displayElem.innerHTML = displayHTML;
+function showDistrictHospitals (district) {
+    
+    const districtData = districs[district];
+    var displayHTML = appTemplate({reg : districtData});
+    displayElem.innerHTML = displayHTML;
+
+}
+
+const bookingRegions = document.querySelector(".book");
+
+bookingRegions.addEventListener('change', function(){
+    const hospitalsForRegion = districtList.filter((hospital) => hospital.District.toLocaleLowerCase() ===  bookingRegions.value)
+    showHosp(hospitalsForRegion);
+})
+
+
+function showBookingForm() {
+    // window.open("Appointment.html");
+
+    document.querySelector(".makeBooking").classList.toggle('hidden');
+    
+    const selectedDistric = bookingRegions.value;
+    showDistrictHospitals(selectedDistric);
+
 }

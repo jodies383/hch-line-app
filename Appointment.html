@@ -32,8 +32,7 @@
     </div>
 
     <span class="error"></span>
-    <form id="form-user" action="mailto:jodies383@gmail.com" enctype="text/plain" method="POST"
-        onsubmit="location.href='myForm.html'">
+    <form id="form-user" action="" enctype="text/plain" method="POST">
         <div class="form-box error" data-errormsg="">
             <div>
                 <label for="input-first">Name</label>
@@ -111,9 +110,13 @@
         </div><br>
 
         <div class="form-box">
-            <button id="button-send">Submit</button>
+            <button onclick="subFunc()" id="button-send">Submit</button>
         </div>
-
+        <script>
+            function subFunc() {
+                window.open("myForm.html");
+            }
+        </script>
     </form>
 </body>
 <script src="form.js"></script>
