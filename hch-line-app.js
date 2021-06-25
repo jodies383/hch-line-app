@@ -307,7 +307,6 @@ bookingRegions.addEventListener('change', function(){
 
 
 function showBookingForm() {
-    // window.open("Appointment.html");
 
     document.querySelector(".makeBooking").classList.toggle('hidden');
     

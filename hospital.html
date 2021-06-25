@@ -51,7 +51,7 @@
 
             <div class="booking">
 
-                <h1>Make a booking</h1>
+                <h1>Make a Booking</h1>
 
                 <label for="input-doctor" style="margin-left: 65%;"><b>DISTRICTS:</b></label><br>
                 <select id="hosp" name="safe" class="form-box book" >
@@ -143,10 +143,13 @@
 
                         <div class="form-box error" data-errormsg="">
                             <p>Have you previously attended/visited this facility?</p>
-                            <input type="radio" id="input-radio" required tabindex="6">
-                            <label for="input-radio">Yes</label>
-                            <input type="radio" id="input-radio" required tabindex="6">
-                            <label for="input-radio">No</label>
+                            <input type="radio" name="radios" class="RadioYes" value="yes">
+                            <span class="label-body">Yes</span>
+                        </label>
+                        <label class="paarl">
+                            <input type="radio" name="radios" class="RadioNo" value="no">
+                            <span class="label-body">No</span>
+                        </label>
                         </div><br>
 
                         <div class="form-box error" data-errormsg="">
@@ -172,7 +175,7 @@
             <div class="hospitals">
                 <h1>Hospitals</h1>
 
-                <input type="text" class="search" placeholder="Search for a district">
+                <input type="text" class="search" placeholder="Filter by district">
 
 
                 <table class="table">
