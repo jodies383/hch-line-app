@@ -165,3 +165,22 @@ th, td {
 .hidden {
     display: none;
 }
+@media (max-width:1024px){
+    body{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .landImg{
+        margin-right: 5%;
+    }
+    .hosImg, .tyImg{
+      float: none;
+    }
+    .mapImage{
+        margin-right: 18%;
+    }
+    .phone, .address {
+        margin-left: 10%;
+    }
+}

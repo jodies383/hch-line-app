@@ -9,9 +9,9 @@
     <script type="text/x-template" class="appTemplate">
         <!-- <ul class="listFormatTemplate"> -->
             {{#each reg}}
-            <option>{{store}}{{this}}</option>
-            {{/each}}
-            <!-- </ul> -->
+    <option>{{store}}{{this}}</option>
+    {{/each}}
+    <!-- </ul> -->
     </script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="hch-line-app.css">
@@ -54,7 +54,7 @@
                 <h1>Make a Booking</h1>
 
                 <label for="input-doctor" style="margin-left: 65%;"><b>DISTRICTS:</b></label><br>
-                <select id="hosp" name="safe" class="form-box book" >
+                <select id="hosp" name="safe" class="form-box book">
                     <option value=""></option>
                     <option value="northern">Northern</option>
                     <option value="eastern">Eastern</option>
@@ -145,11 +145,11 @@
                             <p>Have you previously attended/visited this facility?</p>
                             <input type="radio" name="radios" class="RadioYes" value="yes">
                             <span class="label-body">Yes</span>
-                        </label>
-                        <label class="paarl">
-                            <input type="radio" name="radios" class="RadioNo" value="no">
-                            <span class="label-body">No</span>
-                        </label>
+                            </label>
+                            <label class="paarl">
+                                <input type="radio" name="radios" class="RadioNo" value="no">
+                                <span class="label-body">No</span>
+                            </label>
                         </div><br>
 
                         <div class="form-box error" data-errormsg="">
