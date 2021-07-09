@@ -227,7 +227,6 @@ const districtList = [
         "District": "Western"
     },
 ]
-//hosp.innerHTML += hospString;
 showHosp(districtList);
 
 function showHosp(list) {

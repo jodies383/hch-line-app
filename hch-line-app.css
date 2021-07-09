@@ -6,8 +6,11 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
+.heart {
+    display: flex;
+}
+
 .header {
-    /* margin-left: 2%; */
     font-size: xx-large;
     color: rgb(67, 147, 179);
     display: flex;
@@ -51,7 +54,7 @@ body {
     margin-top: 5%;
 }
 
-#button-send{
+#button-send {
     background-color: white;
     color: black;
     border: 2px solid rgb(116, 172, 236);
@@ -64,19 +67,21 @@ body {
     cursor: pointer;
     border-radius: 12px;
 }
+
 .statsImg {
     text-align: center;
     margin-top: 10%;
 }
-.thanks{
+
+.thanks {
     text-align: center;
 }
+
 hr {
     border: 1px solid rgb(67, 147, 179);
-  }
+}
 
 .table {
-    /* border-style: solid; */
     width: 75%;
     margin-left: 10%;
     padding: 15px;
@@ -87,7 +92,6 @@ th, td {
     border-bottom: 1px solid #E3F1D5;
     padding: 15px;
     background-color: rgba(255, 255, 255, 0.2);
-    /* color: #fff; */
 }
 
 .numbers {
@@ -122,7 +126,6 @@ th, td {
 }
 
 .search {
-    /* float: right; */
     padding: 6px;
     border: none;
     margin-left: 15%;
@@ -160,27 +163,65 @@ th, td {
     margin: 2%;
 }
 
-
-
 .hidden {
     display: none;
 }
-@media (max-width:1024px){
-    body{
+
+@media (max-width:1024px) {
+    body {
         display: flex;
         flex-direction: column;
         text-align: center;
     }
-    .landImg{
+    .landImg {
         margin-right: 5%;
     }
-    .hosImg, .tyImg{
-      float: none;
+    .hosImg, .tyImg {
+        float: none;
     }
-    .mapImage{
+    .mapImage {
         margin-right: 18%;
     }
     .phone, .address {
         margin-left: 10%;
     }
+}
+
+@media (max-width:768px) {
+    .navBar {
+        display: flex;
+        margin-left: -10%;
+    }
+    .landImg {
+        margin-right: 15%;
+    }
+    
+}
+@media (max-width:425px) {
+    .navBar{
+        display: flex;
+        flex-direction: column;
+    }
+    .booking{
+        display: flex;
+        flex-direction: column;
+    }
+    .heart{
+       display: flex;
+       width: 150%;
+    }
+    .hospitals{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width: 44%;
+    }
+    .landImg{
+        margin-left: 15%;
+
+    }
+    .hands{
+        width: auto;
+    }
+    
 }
