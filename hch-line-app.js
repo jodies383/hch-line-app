@@ -1,13 +1,12 @@
 const hospitalList = document.querySelector(".hosp")
 const search = document.querySelector(".search")
-const districtList = districtHospitalList()
+const districtList = FacilitiesByDistrict()
 const templateElem = document.querySelector(".appTemplate").innerHTML;
 const appTemplate = Handlebars.compile(templateElem);
 const displayElem = document.getElementById("input-Hos");
-const hospitalsInDistricts = hospitalsByDistrict()
 const bookingRegions = document.querySelector(".book");
 
-showHosp(districtList);
+showHosp(districtList.districtHospitalList());
 
 function showHosp(list) {
     const dString = list.map(function (listHosp) {
@@ -38,7 +37,7 @@ search.addEventListener('keyup', function (filSearch) {
 
 function showDistrictHospitals (district) {
     
-    const districtData = hospitalsInDistricts[district];
+    const districtData = districtList.hospitalsByDistrict()[district];
     var displayHTML = appTemplate({reg : districtData});
     displayElem.innerHTML = displayHTML;
 

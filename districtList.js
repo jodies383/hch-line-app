@@ -1,3 +1,5 @@
+function FacilitiesByDistrict(){
+    
 function districtHospitalList() {
     const districtList = [
         {
@@ -233,4 +235,9 @@ function hospitalsByDistrict() {
         western,
     }
     return districts
+}
+return {
+    districtHospitalList,
+    hospitalsByDistrict
+}
 }
