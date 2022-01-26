@@ -15,6 +15,26 @@ body {
     color: rgb(67, 147, 179);
     display: flex;
 }
+input[type=text], select {
+    color:#232c3d;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(67, 147, 179);
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  button:hover {
+    background-color: rgb(111, 186, 216);
+  }
+  
+  button{
+    color:rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+  }
+.AppointmentForm{
+    text-align: center;
+}
 
 .info1, .info2 {
     font-size: 120%;
@@ -56,7 +76,7 @@ body {
 
 #button-send {
     background-color: white;
-    color: black;
+    color: #232c3d;
     border: 2px solid rgb(116, 172, 236);
     padding: 10px 24px;
     text-align: center;

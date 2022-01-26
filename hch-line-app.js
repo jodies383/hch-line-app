@@ -1,12 +1,12 @@
 const hospitalList = document.querySelector(".hosp")
 const search = document.querySelector(".search")
-const districtList = FacilitiesByDistrict()
 const templateElem = document.querySelector(".appTemplate").innerHTML;
 const appTemplate = Handlebars.compile(templateElem);
 const displayElem = document.getElementById("input-Hos");
 const bookingRegions = document.querySelector(".book");
-
-showHosp(districtList.districtHospitalList());
+const districtNames = FacilitiesByDistrict()
+const hospitalInformation = districtNames.districtHospitalList()
+showHosp(hospitalInformation);
 
 function showHosp(list) {
     const dString = list.map(function (listHosp) {
@@ -25,26 +25,26 @@ function showHosp(list) {
 }
 
 if (search){
-search.addEventListener('keyup', function (filSearch) {
-    const filHosp = filSearch.target.value;
+search.addEventListener('keyup', (filSearch) => {
+        const filHosp = filSearch.target.value;
 
-    const disFil = districtList.filter(function (facilities) {
-        return facilities.District.includes(filHosp);
-    });
-    showHosp(disFil)
-})
+        const disFil = hospitalInformation.filter(function (facilities) {
+            return facilities.District.toLocaleLowerCase().includes(filHosp);
+        });
+        showHosp(disFil);
+    })
 }
 
 function showDistrictHospitals (district) {
     
-    const districtData = districtList.hospitalsByDistrict()[district];
+    const districtData = districtNames.hospitalsByDistrict()[district];
     var displayHTML = appTemplate({reg : districtData});
     displayElem.innerHTML = displayHTML;
 
 }
 
 bookingRegions.addEventListener('change', function(){
-    const hospitalsForRegion = districtList.filter((hospital) => hospital.District.toLocaleLowerCase() ===  bookingRegions.value)
+    const hospitalsForRegion = hospitalInformation.filter((hospital) => hospital.District.toLocaleLowerCase() ===  bookingRegions.value)
     showHosp(hospitalsForRegion);
 })
 
