@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
-
+    <script src="https://js.arcgis.com/4.22/"></script>
     <script type="text/x-template" class="appTemplate">
             {{#each reg}}
     <option>{{store}}{{this}}</option>
@@ -17,10 +16,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="Public/heartbeat.png">
-
     <title>Find a Healthcare Facility</title>
 </head>
-
 <body>
     <div class="hch-line-app">
         <div class="header">
@@ -188,6 +185,7 @@
     <script src="anychart.js"></script>
     <script src="districtList.js"></script>
     <script src="hch-line-app.js"></script>
+    
     <footer>
         <hr>
         powered by Dynamite
