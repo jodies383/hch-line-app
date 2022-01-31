@@ -1,4 +1,4 @@
-const hospitalList = document.querySelector(".hosp")
+const hospitalList = document.querySelector(".displayHospitalLists")
 const search = document.querySelector(".search")
 const templateElem = document.querySelector(".appTemplate").innerHTML;
 const appTemplate = Handlebars.compile(templateElem);
@@ -24,8 +24,8 @@ function showHosp(list) {
     }
 }
 
-if (search){
-search.addEventListener('keyup', (filSearch) => {
+if (search) {
+    search.addEventListener('keyup', (filSearch) => {
         const filHosp = filSearch.target.value;
 
         const disFil = hospitalInformation.filter(function (facilities) {
@@ -35,23 +35,29 @@ search.addEventListener('keyup', (filSearch) => {
     })
 }
 
-function showDistrictHospitals (district) {
-    
+function showDistrictHospitals(district) {
+
     const districtData = districtNames.hospitalsByDistrict()[district];
-    var displayHTML = appTemplate({reg : districtData});
+    var displayHTML = appTemplate({ reg: districtData });
     displayElem.innerHTML = displayHTML;
 
 }
 
-bookingRegions.addEventListener('change', function(){
-    const hospitalsForRegion = hospitalInformation.filter((hospital) => hospital.District.toLocaleLowerCase() ===  bookingRegions.value)
+bookingRegions.addEventListener('change', function () {
+    let hospitalsForRegion
+    if (bookingRegions.value == '') {
+        hospitalsForRegion = hospitalInformation
+    }
+    else {
+        hospitalsForRegion = hospitalInformation.filter((hospital) => hospital.District.toLocaleLowerCase() === bookingRegions.value)
+    }
     showHosp(hospitalsForRegion);
 })
 
 function showBookingForm() {
 
     document.querySelector(".makeBooking").classList.toggle('hidden');
-    
+
     const selectedDistric = bookingRegions.value;
     showDistrictHospitals(selectedDistric);
 
