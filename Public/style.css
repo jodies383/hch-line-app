@@ -21,6 +21,7 @@ abc{
     color: rgba(255, 255, 255, 0.2);
     display: flex;
     display: block;
+    font-size: xx-large;
 }
 input[type=text], select {
     color:#232c3d;
