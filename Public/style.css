@@ -16,11 +16,7 @@ body {
     color: rgb(67, 147, 179);
     display: flex;
 }
-abc{
-    text-align: center;
-    color: rgba(255, 255, 255, 0.2);
-    display: flex;
-}
+
 input[type=text], select {
     color:#232c3d;
     padding: 12px 20px;
